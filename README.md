@@ -53,3 +53,41 @@ export default (url,data={},method="GET")=>{
     <image src="{{itemName.pic}}" />
 </swiper-item>
 ```
+
+#### 首页_自定义组件
+
+> 1.创建组件
+> 2.组件wxml代码 + 布局wxss
+> 3.定义外部属性
+
+```js
+  /**
+   * 组件的属性列表,由组件外部传进来
+   */
+  properties: {
+    title:{
+      type:String,
+      value:"title默认值"
+    },
+    nav:{
+      type:String,
+      value:"nav默认值"
+    }
+  },
+```
+
+> 4.在使用该组件的json配置上注册组件
+
+```json
+{
+  "usingComponents": {
+    "NavHeader":"/components/NavHeader/NavHeader"
+  }
+}
+```
+
+> 5.使用组件
+
+```html
+<NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
+```
