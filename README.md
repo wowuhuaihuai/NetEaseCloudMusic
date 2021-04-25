@@ -98,3 +98,32 @@ export default (url,data={},method="GET")=>{
 
 #### 首页_排行榜请求动态数据
 
+#### tabBar的使用
+app.json
+```json
+  "tabBar": {
+    "color": "#94969C",
+    "selectedColor": "#F74172",
+    "backgroundColor": "#FFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "static/images/tabs/tab-home.png",
+        "selectedIconPath": "static/images/tabs/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath": "static/images/tabs/select.png",
+        "selectedIconPath": "static/images/tabs/selected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "static/images/tabs/tab-my.png",
+        "selectedIconPath": "static/images/tabs/tab-my-current.png"
+      }
+    ]
+  },
+```
