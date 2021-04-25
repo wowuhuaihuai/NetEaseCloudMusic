@@ -1,19 +1,87 @@
-/**index.wxss**/
-.userinfo {
+/* pages/index/index.wxss */
+.binners{
+  width: 100%;
+  height: 300rpx;
+}
+
+.binners image{
+  width: 100%;
+  height: 100%;
+}
+
+.navContainer{
+  display: flex;
+}
+.navItem{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #aaa;
+  width: 20%;
+  text-align: center;
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.navItem .iconfont{
+  width: 100rpx;
+  height: 100rpx;
+  background: rgb(240,19,19);
   border-radius: 50%;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  margin: 20rpx auto;
 }
 
-.usermotto {
-  margin-top: 200px;
+.navItem text{
+  font-size: 26rpx;
+}
+
+/* 推荐歌曲样式 */
+.recommendContainer{
+  padding: 20rpx;
+}
+.recommendContainer .header .title{
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #666;
+}
+.recommendContainer .header .more{
+  float: right;
+  border: 1rpx solid #666;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  border-radius: 30rpx;
+
+}
+
+/* 推荐内容区 */
+.recommendScroll{
+  display: flex;
+  margin: 20rpx;
+}
+.scrollItem{
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+
+.scrollItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.scrollItem text{
+  font-size: 26rpx;
+  /* 单行文本溢出隐藏 ... */
+  /* display: block;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; */
+    /* 多行文本溢出隐藏 ... */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* 设置对齐方式 */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
 }

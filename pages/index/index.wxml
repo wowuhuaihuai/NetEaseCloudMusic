@@ -1,23 +1,84 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
+<view class="indexContainer">
+  <!-- 轮播图区域 -->
+  <swiper class="binners" indicator-dots indicator-color="ivory" indicator-active-color="#d43c33">
+    <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+      <image src="{{item.pic}}" />
+    </swiper-item>
+  </swiper>
+  <!-- 五个图标导航区 -->
+  <view class="navContainer">
+    <view class="navItem">
+      <text class="iconfont iconmeirituijian1"></text>
+      <text>每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icongedan"></text>
+      <text>歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont iconpaihangbang"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont iconFM"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont iconzhibobofangshexiangjitianxianmianxing"></text>
+      <text>直播</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲区域 -->
+  <view class="recommendContainer">
+    <view class="header">
+      <text class="title">推荐歌曲</text>
+      <view>
+        <text>为你精心推荐</text>
+        <text class="more">查看更多</text>
       </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <!-- 内容区 -->
+  <scroll-view class="recommendScroll" enable-flex scroll-x="{{true}}">
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello dhuisghiuasgduasgdugasiu</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+    <view class="scrollItem">
+      <image class="" src="/static/images/nvsheng.jpg"></image>
+      <text>hello</text>
+    </view>
+  </scroll-view>
 </view>
