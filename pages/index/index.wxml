@@ -40,45 +40,10 @@
   </view>
   <!-- 内容区 -->
   <scroll-view class="recommendScroll" enable-flex scroll-x="{{true}}">
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello dhuisghiuasgduasgdugasiu</text>
+    <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id">
+      <image class="" src="{{item.picUrl}}"></image>
+      <text>{{item.name}}</text>
     </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
-    <view class="scrollItem">
-      <image class="" src="/static/images/nvsheng.jpg"></image>
-      <text>hello</text>
-    </view>
+    
   </scroll-view>
 </view>

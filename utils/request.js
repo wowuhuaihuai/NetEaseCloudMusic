@@ -10,8 +10,7 @@ export default (url,data={},method="GET")=>{
             method,
             success: (result) => {
                 console.log(config.host+'/'+url)
-                console.log('result1',result.data)
-                
+                console.log('request result:',result.data)
                 resolve(result.data)
             },
             fail: (err) => { reject(err)},
