@@ -91,3 +91,7 @@ export default (url,data={},method="GET")=>{
 ```html
 <NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
 ```
+
+#### 首页_排行榜布局
+
+> swiper 的 circular next-margin="50rpx" 属性
