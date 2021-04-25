@@ -10,7 +10,8 @@ Page({
     hasUserInfo: false,
     canIUseGetUserProfile: false,
     bannerList: [], // 轮播数据
-    recommendList:[] // 推荐歌单数据
+    recommendList:[], // 推荐歌单数据
+    topListData:[], // 排行榜数据
   },
   handleParent() {
     console.log("handleParent");
@@ -68,6 +69,23 @@ Page({
     // 请求推荐歌单数据
     const recommendListData = await request("personalized", { limit: 10 });    
     this.setData({ recommendList: recommendListData.result });
+
+    // 请求排行榜数据
+    let index = 0
+    let resultArray = []
+    while(index<5){
+      const topListData = await request("top/list", { idx: index++ });    
+      let topListItem = { name:topListData.playlist.name,tracks:topListData.playlist.tracks.slice(0,3)}
+      resultArray.push(topListItem)
+      this.setData({ topList: resultArray });
+    }
+    console.log('topList',resultArray)
+    
+
+
+
+
+
   },
 
   /**

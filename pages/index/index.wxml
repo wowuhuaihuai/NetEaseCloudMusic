@@ -45,25 +45,15 @@
     <!-- 排行榜头部区 -->
     <NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
     <!-- 排行榜内容区 -->
-    <swiper class="topListSwiper" circular next-margin="50rpx">
-      <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+    <swiper class="topListSwiper" circular="{{false}}" next-margin="50rpx">
+      <swiper-item wx:for="{{topList}}" wx:key="name">
         <view class="swiperItem">
-          <view class="title">影帝坏得很随货单</view>
-        <view class="musicItem">
-          <image src="/static/images/nvsheng.jpg"></image>
-          <text class="count">1</text>
-          <text class="musicName">伤心太平洋</text>
-        </view>
-        <view class="musicItem">
-          <image src="/static/images/nvsheng.jpg"></image>
-          <view class="count">1</view>
-          <text class="musicName">伤心太平洋</text>
-        </view>
-        <view class="musicItem">
-          <image src="/static/images/nvsheng.jpg"></image>
-          <text class="count">1</text>
-          <text class="musicName">伤心太平洋</text>
-        </view>
+          <view class="title">{{item.name}}</view>
+          <view class="musicItem" wx:for="{{item.tracks}}" wx:for-item="track" wx:for-index="trackIndex" wx:key="id">
+            <image src="{{track.al.picUrl}}"></image>
+            <text class="count">{{trackIndex+1}}</text>
+            <text class="musicName">{{track.name}}</text>
+          </view>
         </view>
       </swiper-item>
     </swiper>

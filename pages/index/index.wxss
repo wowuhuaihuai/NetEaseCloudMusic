@@ -107,6 +107,11 @@
 }
 
 .musicItem .musicName{
+  max-width: 300rpx;
   height: 100rpx;
   line-height: 100rpx;
+  display: block;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }

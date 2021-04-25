@@ -95,3 +95,6 @@ export default (url,data={},method="GET")=>{
 #### 首页_排行榜布局
 
 > swiper 的 circular next-margin="50rpx" 属性
+
+#### 首页_排行榜请求动态数据
+
