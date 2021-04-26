@@ -1,3 +1,59 @@
-<!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
-	
+<!-- pages/personal/personal.wxml -->
+<view class="indexContainer">
+    <view class="header">
+        <image class="bgImg" src="/static/images/personal/bgImg2.jpg"></image>
+        <view class="user">
+            <image class="userAvatar" src="/static/images/personal/missing-face.png"></image>
+            <text class="userName">游客</text>
+        </view>
+        <view class="card">
+            <image class="/cardImg" src="/static/images/personal/vip-card-bg.png"></image>
+            <view class="cardContent">
+                <text class="icon iconfont iconhuangguan"></text>
+                <text class="cardName">风起会员</text>
+                <button>立即开通</button>
+            </view>
+            <view class="cardVip">
+                <text>atguigu Union</text>
+                <text class="openVip">开通会员 干啥都行</text>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <image class="arc" src="/static/images/personal/arc.png"></image>
+        <view class="mark">
+            <view class="icons">
+                <view>
+                    <text class="iconfont iconxiaoxi"></text>
+                    <text>我的消息</text>
+                </view>
+                <view>
+                    <text class="iconfont iconwodehaoyou"></text>
+                    <text>我的好友</text>
+                </view>
+                <view>
+                    <text class="iconfont iconren2"></text>
+                    <text>个人主页</text>
+                </view>
+                <view>
+                    <text class="iconfont icongexingzhuangban"></text>
+                    <text>个性装扮</text>
+                </view>
+            </view>
+            <view class="items">
+                <text class="firstItem">最近播放</text>
+                <text class="desc">暂无播放记录</text>
+                <view class="item">
+                    <text>我的音乐</text>
+                </view>
+                <view class="item">
+                    <text>我的收藏</text>
+                </view>
+                <view class="item">
+                    <text>我的电台</text>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</view>
