@@ -1,13 +1,45 @@
 // pages/personal/personal.js
+let starY = 0 // 手指起始的坐标
+let moveY = 0  // 手指移动的坐标
+let moveDistance = 0 // 手指移动的距离
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-
+		contentTransform:"translateY(0)",
+		contentTransition:""
 	},
 
+	bindTouchStart(event){
+		starY = event.touches[0].clientY
+		this.setData({
+			contentTransition:""
+		})
+	},
+	bindTouchMove(event){
+		moveY = event.touches[0].clientY
+		moveDistance = moveY-starY
+		console.log('moveDistance',moveDistance)
+		
+		if(moveDistance < 0){
+			return
+		}
+		if(moveDistance > 100){
+			moveDistance = 100
+		}
+		this.setData({
+			contentTransform:`translateY(${moveDistance}rpx)`
+		})
+
+	},
+	bindTouchEnd(){
+		this.setData({
+			contentTransform:`translateY(0rpx)`,
+			contentTransition:"transform 1s linear"
+		})
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

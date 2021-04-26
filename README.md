@@ -129,3 +129,7 @@ app.json
 ```
 
 #### 个人页面布局
+
+#### 个人页面的滑动效果
+> transform:"translateY(0)"
+> 计算滑动的距离，再用transform来实现滑动效果

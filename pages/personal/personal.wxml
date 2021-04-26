@@ -19,7 +19,13 @@
             </view>
         </view>
     </view>
-    <view class="content">
+    <view
+     class="content"
+     bindtouchstart="bindTouchStart"
+     bindtouchmove="bindTouchMove"
+     bindtouchend="bindTouchEnd"
+     style="transform:{{contentTransform}};transition:{{contentTransition}}"
+     >
         <image class="arc" src="/static/images/personal/arc.png"></image>
         <view class="mark">
             <view class="icons">
