@@ -11,7 +11,7 @@
             <input type="password" placeholder="请输入密码"  bindinput="handleInput" id="password" data-type="password"/>
         </view>
     </view>
-    <button>登录</button>
+    <button bindtap="login">登录</button>
     <text class="forgetPassword">忘记密码?</text>
     <view class="footer">还没有账号？<text class="register">马上注册</text>
     </view>

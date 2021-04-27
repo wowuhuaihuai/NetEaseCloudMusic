@@ -139,3 +139,6 @@ app.json
 #### 登录页_event传递手机号和密码
 > 前端：id="phone"；js：event.currentTarget.id
 > 前端：data-type="phone；js：event.currentTarget.dataset.type
+
+#### 登录页_前端验证手机号和密码
+> wx.showToast
