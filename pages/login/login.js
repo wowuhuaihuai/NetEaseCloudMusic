@@ -1,4 +1,5 @@
 // pages/login/login.js
+import request from '../../utils/request'
 Page({
   /**
    * 页面的初始数据
@@ -22,8 +23,11 @@ Page({
     });
   },
   // 点击登录按钮的逻辑
-  login(){
+  async login(){
+    // 获取手机号和密码
     let {phone,password} = this.data
+
+    // 验证手机号不能为空
     if(!phone){
       wx.showToast({
         title: '手机号不能为空',
@@ -31,6 +35,8 @@ Page({
       })
       return
     }
+
+    // 验证手机号的格式
     let phoneReg = /^1(3|4|5|6|7|8|9)\d{9}$/
     if (!phoneReg.test(phone)) {
       wx.showToast({
@@ -39,6 +45,8 @@ Page({
       })
       return
     }
+
+    // 验证密码不能为空
     if(!password){
       wx.showToast({
         title: '密码不能为空',
@@ -46,6 +54,23 @@ Page({
       })
       return
     }
+
+    // 发送请求
+    let result = await request('login/cellphone',{phone,password})
+    console.log('result',result)
+    if(result.code === 200){
+      wx.showToast({
+        title: '登录成功'
+      })
+    }else{
+      console.log('result.message',result.message)
+      wx.showToast({
+        title: result.message,
+        icon: 'none'
+      })
+    }
+
+    
   },
   /**
    * 生命周期函数--监听页面加载
