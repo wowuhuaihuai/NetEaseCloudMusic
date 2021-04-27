@@ -4,11 +4,11 @@
     <view class="box">
         <view class="item">
             <text>手机号</text>
-            <input type="text" placeholder="请输入手机号码" />
+            <input type="text" placeholder="请输入手机号码" bindinput="handleInput" id="phone" data-type="phone"/>
         </view>
         <view class="item">
             <text>密码</text>
-            <input type="password" placeholder="请输入密码" />
+            <input type="password" placeholder="请输入密码"  bindinput="handleInput" id="password" data-type="password"/>
         </view>
     </view>
     <button>登录</button>

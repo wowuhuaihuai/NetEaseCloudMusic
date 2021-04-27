@@ -135,3 +135,7 @@ app.json
 > 计算滑动的距离，再用transform来实现滑动效果
 
 #### 登录页_布局
+
+#### 登录页_event传递手机号和密码
+> 前端：id="phone"；js：event.currentTarget.id
+> 前端：data-type="phone；js：event.currentTarget.dataset.type
